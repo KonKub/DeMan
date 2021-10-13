@@ -30,11 +30,11 @@ namespace DeMan
             random = new Random();
             this.Padding = new Padding(borderSize);
 
-            USB_CAN_Adapter USBCAN = new USB_CAN_Adapter();
-            USBCAN.ReadNotification += USBCANReadData;   // Добавляем обработчик для события ReadNotification
-            USBCAN.ReadCAN += USBCANReadMsg;             // Добавляем обработчик для события ReadCAN
+            //USB_CAN_Adapter USBCAN = new USB_CAN_Adapter();
+           // USBCAN.ReadNotification += USBCANReadData;   // Добавляем обработчик для события ReadNotification
+           // USBCAN.ReadCAN += USBCANReadMsg;             // Добавляем обработчик для события ReadCAN
 
-            USBCAN.connect();
+           // USBCAN.connect();
 
         }
 
@@ -161,7 +161,7 @@ namespace DeMan
 
         private void btnParams_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Params(), sender);
         }
 
         private void btnGraph_Click(object sender, EventArgs e)
