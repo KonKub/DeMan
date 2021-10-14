@@ -84,7 +84,7 @@ namespace DeMan
                     currentButton.ForeColor = Color.White;
                     plBtn.BackColor = color;
                     plLogo.BackColor = ColorChoice.ChangeColorBrightness(color, -0.3);
-                    labelTitle.Text = (btnSender as Button).Tag.ToString();
+                   //Uncomment labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
                 }
 
@@ -161,7 +161,7 @@ namespace DeMan
 
         private void btnParams_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Params(), sender);
         }
 
         private void btnGraph_Click(object sender, EventArgs e)
@@ -210,6 +210,11 @@ namespace DeMan
                     menuButton.Padding = new Padding(10,8,8,8);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new USB(), sender);
         }
     }
 }
