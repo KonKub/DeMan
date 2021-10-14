@@ -30,11 +30,11 @@ namespace DeMan
             random = new Random();
             this.Padding = new Padding(borderSize);
 
-            //USB_CAN_Adapter USBCAN = new USB_CAN_Adapter();
-           // USBCAN.ReadNotification += USBCANReadData;   // Добавляем обработчик для события ReadNotification
-           // USBCAN.ReadCAN += USBCANReadMsg;             // Добавляем обработчик для события ReadCAN
+            USB_CAN_Adapter USBCAN = new USB_CAN_Adapter();
+            USBCAN.ReadNotification += USBCANReadData;   // Добавляем обработчик для события ReadNotification
+            USBCAN.ReadCAN += USBCANReadMsg;             // Добавляем обработчик для события ReadCAN
 
-           // USBCAN.connect();
+            USBCAN.connect();
 
         }
 
@@ -84,7 +84,7 @@ namespace DeMan
                     currentButton.ForeColor = Color.White;
                     plBtn.BackColor = color;
                     plLogo.BackColor = ColorChoice.ChangeColorBrightness(color, -0.3);
-                    labelTitle.Text = (btnSender as Button).Tag.ToString();
+                   //Uncomment labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
                 }
 
@@ -210,6 +210,11 @@ namespace DeMan
                     menuButton.Padding = new Padding(10,8,8,8);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new USB(), sender);
         }
     }
 }

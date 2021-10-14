@@ -58,6 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorChoice.cs" />
+    <Compile Include="USB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USB.Designer.cs">
+      <DependentUpon>USB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

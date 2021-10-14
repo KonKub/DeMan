@@ -44,6 +44,7 @@ namespace DeMan
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.plForm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.plMenu.SuspendLayout();
             this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@ namespace DeMan
             // 
             this.plMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.plMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.plMenu.Controls.Add(this.button1);
             this.plMenu.Controls.Add(this.btnList);
             this.plMenu.Controls.Add(this.btnBoot);
             this.plMenu.Controls.Add(this.btnGraph);
@@ -305,6 +307,17 @@ namespace DeMan
             this.plForm.Size = new System.Drawing.Size(1142, 623);
             this.plForm.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 438);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 57);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +359,7 @@ namespace DeMan
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnSizeMin;
         private FontAwesome.Sharp.IconButton btnFold;
+        private System.Windows.Forms.Button button1;
     }
 }
 
