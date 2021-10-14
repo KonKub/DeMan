@@ -15,8 +15,6 @@ namespace DeMan
     {
         //Координаты мышки
         private int borderSize = 2;
-        private Size formSize;
-
         //Fields
         private Button currentButton;
         private Random random;
@@ -71,7 +69,7 @@ namespace DeMan
             tempIndex = index;
             return ColorTranslator.FromHtml(ColorChoice.ColorList[index]);
         }
-        private void ActivateButton(object btnSender)
+        public void ActivateButton(object btnSender)
         {
             if (btnSender != null)
             {
@@ -84,7 +82,7 @@ namespace DeMan
                     currentButton.ForeColor = Color.White;
                     plBtn.BackColor = color;
                     plLogo.BackColor = ColorChoice.ChangeColorBrightness(color, -0.3);
-                   //Uncomment labelTitle.Text = (btnSender as Button).Tag.ToString();
+                    labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
                 }
 
@@ -109,7 +107,7 @@ namespace DeMan
             childForm.Show();
             //label1.Text = childForm.Text;
         }
-        private void DisableButton()
+        public void DisableButton()
         {
             foreach (Control previousBtn in plMenu.Controls)
             {
