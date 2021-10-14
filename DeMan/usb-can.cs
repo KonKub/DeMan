@@ -27,33 +27,23 @@ namespace DeMan
         [DllImport("AHid.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern int AHid_info(byte[] buffer1, int bufferSize1, byte[] buffer2, int bufferSize2);
 
-        const int TIMER_INTERVAL = 50;
-        const int TMP_BUFFER_SIZE = 1000;
+        private const int TIMER_INTERVAL = 50;
+        private const int TMP_BUFFER_SIZE = 1000;
 
-        const int MAX_REPORT_SIZE = 64;
-        const int AHID_REPORT_TYPE_INPUT = 0;
-        const int AHID_REPORT_TYPE_OUTPUT = 1;
-        const int AHID_OK = 0;
-        const int AHID_ERROR = -1;
+        private const int AHID_OK = 0;
+        private const int AHID_ERROR = -1;
 
-        static int findInterval;
+        private bool Connected = false;
+        private int outputHandle;
+        private int inputHandle;
 
-        bool Connected = false;
-        int interfaceID;
-        int outputHandle;
-        int outputReportID;
-        int outputReportSize;
-        int inputHandle;
-        int inputReportID;
-        int inputReportSize;
-
-        Timer timer;
+        private Timer timerRead;
+        private Timer timerFind;
 
         byte[] CANMsg = new byte[12];
         byte CANMsgCursor=0;
         byte HeaderExpected = 7;
         bool HeaderFound = false;
-
 
         public delegate void ReadHandler(byte[] AData);
         public event ReadHandler ReadNotification;
@@ -62,23 +52,25 @@ namespace DeMan
 
         public USB_CAN_Adapter()
         {
-            timer = new Timer();
+            timerRead = new Timer();
+            timerRead.Interval = TIMER_INTERVAL;    //интервал чтения данных
+            timerRead.Tick += new EventHandler(timerReadCallback);
+            timerRead.Start();
 
-            timer.Interval = TIMER_INTERVAL;
-            timer.Tick += new EventHandler(timerCallback);
-            timer.Start();
-
-            interfaceID = -1;
-            outputReportID = 4;
-            outputReportSize = 64;
-            inputReportID = 0;
-            inputReportSize = 64;
+            timerFind = new Timer();
+            timerFind.Interval = 1000;              //1000 - поиск каждую секунду
+            timerFind.Tick += new EventHandler(timerFindCallback);
+            timerFind.Start();
         }
 
-        private void timerCallback(object sender, EventArgs e)
+        private void timerReadCallback(object sender, EventArgs e)
         {
             read();
-            if ((findInterval++ % 10) == 0) find();
+        }
+
+        private void timerFindCallback(object sender, EventArgs e)
+        {
+            find();
         }
 
         public void connect()
@@ -97,8 +89,8 @@ namespace DeMan
                         AHid_info(buffer1, TMP_BUFFER_SIZE, buffer2, TMP_BUFFER_SIZE);
                     }
 
-                    AHid_register(ref outputHandle, 0x0483, 0x5750, interfaceID, outputReportID, outputReportSize, AHID_REPORT_TYPE_OUTPUT);
-                    AHid_register(ref  inputHandle, 0x0483, 0x5750, interfaceID, inputReportID, inputReportSize, AHID_REPORT_TYPE_INPUT);
+                    AHid_register(ref outputHandle, 0x0483, 0x5750, -1, 4, 64, 1);
+                    AHid_register(ref  inputHandle, 0x0483, 0x5750, -1, 0, 64, 0);
 
                     find();
 
@@ -135,8 +127,7 @@ namespace DeMan
         {
             bool result = false;
 
-            if (AHID_OK == AHid_find(outputHandle) &&
-                AHID_OK == AHid_find(inputHandle))
+            if (AHid_find(outputHandle)== AHID_OK && AHid_find(inputHandle)==AHID_OK)
             {
                 setGUID();
 
@@ -155,11 +146,11 @@ namespace DeMan
         private void read()
         {
             int bytesRead = 0;
-            byte[] buffer = new byte[MAX_REPORT_SIZE];
+            byte[] buffer = new byte[64];
 
             for (int i = 0; i < TIMER_INTERVAL; i++)
             {
-                AHid_read(inputHandle, buffer, inputReportSize, ref bytesRead);
+                AHid_read(inputHandle, buffer, 64, ref bytesRead);
 
                 if (bytesRead != 0) //считаны какие-то данные
                 {
