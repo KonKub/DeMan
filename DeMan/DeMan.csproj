@@ -57,6 +57,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VScom.cs" />
     <Compile Include="ColorChoice.cs" />
     <Compile Include="USB.cs">
       <SubType>Form</SubType>
@@ -79,6 +80,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usb-can.cs" />
+    <Compile Include="vs_can_api_wrapper.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

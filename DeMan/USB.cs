@@ -19,13 +19,16 @@ namespace DeMan
             USBCAN = new USB_CAN_Adapter();
             USBCAN.ReadNotification += USBCANReadData;   // Добавляем обработчик для события ReadNotification
             USBCAN.ReadCAN += USBCANReadMsg;             // Добавляем обработчик для события ReadCAN
-
             USBCAN.connect();
+
+            VSCCAN = new VScom();
+            VSCCAN.ReadCAN += VSCANReadMsg;              // Добавляем обработчик для события ReadCAN
         }
 
         private USB_CAN_Adapter USBCAN;
+        private VScom VSCCAN;
 
-        private void USBCANReadData(byte[] AData) //обработчик для события USB-CAN ReadNotification
+        private void USBCANReadData(byte[] AData)        //обработчик для события USB-CAN ReadNotification
         {
             string s = "";
             for (int i = 0; i < AData.Length; i++)
@@ -33,17 +36,24 @@ namespace DeMan
             label1.Text = s;
             //LogBox.Text += s + Environment.NewLine;
         }
-        private void USBCANReadMsg(byte[] AData) //обработчик для события USB-CAN ReadNotification
+        private void USBCANReadMsg(byte[] AData)         //обработчик для события USB-CAN ReadNotification
         {
             string s = "";
             for (int i = 0; i < AData.Length; i++)
                 s = s + String.Format("{0,4}", AData[i]);
             LogBox.Text += s + Environment.NewLine;
         }
+        private void VSCANReadMsg(VSCAN_MSG[] AMsg, UInt32 ARead) //обработчик для события VScom ReadNotification
+        {
+            for (int i = 0; i < ARead; i++)
+            { 
+
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-                              //  команда|-----ExtID------|------------Data[8]-----------------
+                              //   команда|-----ExtID------|------------Data[8]-----------------
             byte[] w = new byte[] { 0, 101, 0, 100, 67, 240, 0, 18, 255, 255, 255, 255, 255, 255 };
             USBCAN.write(w);
         }
