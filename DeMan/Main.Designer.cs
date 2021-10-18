@@ -30,6 +30,7 @@ namespace DeMan
         private void InitializeComponent()
         {
             this.plMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnList = new FontAwesome.Sharp.IconButton();
             this.btnBoot = new FontAwesome.Sharp.IconButton();
             this.btnGraph = new FontAwesome.Sharp.IconButton();
@@ -44,7 +45,6 @@ namespace DeMan
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.plForm = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.plMenu.SuspendLayout();
             this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +67,18 @@ namespace DeMan
             this.plMenu.Name = "plMenu";
             this.plMenu.Size = new System.Drawing.Size(214, 679);
             this.plMenu.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 438);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 57);
+            this.button1.TabIndex = 10;
+            this.button1.Tag = "Кнопка";
+            this.button1.Text = "Кнопка";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnList
             // 
@@ -306,17 +318,6 @@ namespace DeMan
             this.plForm.Name = "plForm";
             this.plForm.Size = new System.Drawing.Size(1142, 623);
             this.plForm.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 57);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Кнопка";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Main
             // 

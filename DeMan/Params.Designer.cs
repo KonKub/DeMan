@@ -29,9 +29,9 @@ namespace DeMan
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.plbtn = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnWriteRAM = new FontAwesome.Sharp.IconButton();
@@ -123,51 +123,53 @@ namespace DeMan
             // 
             // plTable
             // 
+            this.plTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.plTable.Controls.Add(this.DataGridParams);
-            this.plTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plTable.Location = new System.Drawing.Point(0, 30);
             this.plTable.Name = "plTable";
-            this.plTable.Size = new System.Drawing.Size(800, 398);
+            this.plTable.Size = new System.Drawing.Size(800, 602);
             this.plTable.TabIndex = 1;
             // 
             // DataGridParams
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.DataGridParams.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.DataGridParams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.DataGridParams.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridParams.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DataGridParams.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridParams.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridParams.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridParams.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DataGridParams.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.DataGridParams.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridParams.ColumnHeadersHeight = 25;
             this.DataGridParams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.Параметр,
             this.Value});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridParams.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DataGridParams.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridParams.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridParams.Dock = System.Windows.Forms.DockStyle.Left;
             this.DataGridParams.EnableHeadersVisualStyles = false;
             this.DataGridParams.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.DataGridParams.Location = new System.Drawing.Point(0, 0);
             this.DataGridParams.Name = "DataGridParams";
+            this.DataGridParams.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridParams.RowHeadersVisible = false;
-            this.DataGridParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridParams.Size = new System.Drawing.Size(800, 398);
+            this.DataGridParams.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DataGridParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.DataGridParams.Size = new System.Drawing.Size(664, 602);
             this.DataGridParams.TabIndex = 0;
             this.DataGridParams.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Light;
             this.DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
@@ -178,7 +180,7 @@ namespace DeMan
             this.DataGridParams.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.DataGridParams.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.DataGridParams.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.DataGridParams.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataGridParams.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.DataGridParams.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.DataGridParams.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.DataGridParams.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -194,11 +196,13 @@ namespace DeMan
             // 
             // Num
             // 
+            this.Num.FillWeight = 50F;
             this.Num.HeaderText = "#";
             this.Num.Name = "Num";
             // 
             // Параметр
             // 
+            this.Параметр.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Параметр.HeaderText = "Param";
             this.Параметр.Name = "Параметр";
             // 
@@ -206,13 +210,14 @@ namespace DeMan
             // 
             this.Value.HeaderText = "Значение";
             this.Value.Name = "Value";
+            this.Value.Width = 221;
             // 
             // Params
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 632);
             this.Controls.Add(this.plTable);
             this.Controls.Add(this.plbtn);
             this.Name = "Params";
@@ -230,11 +235,11 @@ namespace DeMan
         private System.Windows.Forms.Panel plbtn;
         private FontAwesome.Sharp.IconButton brnRead;
         private System.Windows.Forms.Panel plTable;
-        private Guna.UI.WinForms.GunaDataGridView DataGridParams;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnWriteRAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Параметр;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
-        private FontAwesome.Sharp.IconButton btnSave;
-        private FontAwesome.Sharp.IconButton btnWriteRAM;
+        public Guna.UI.WinForms.GunaDataGridView DataGridParams;
     }
 }

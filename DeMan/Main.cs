@@ -15,6 +15,7 @@ namespace DeMan
     {
         //Координаты мышки
         private int borderSize = 2;
+        private Size formSize;
         //Fields
         private Button currentButton;
         private Random random;
@@ -219,5 +220,8 @@ namespace DeMan
         {
             OpenChildForm(new USB(), sender);
         }
+        
+       
+     
     }
 }
