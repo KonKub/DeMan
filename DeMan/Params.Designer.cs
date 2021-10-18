@@ -29,10 +29,12 @@ namespace DeMan
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.plbtn = new System.Windows.Forms.Panel();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnWriteRAM = new FontAwesome.Sharp.IconButton();
             this.brnRead = new FontAwesome.Sharp.IconButton();
             this.plTable = new System.Windows.Forms.Panel();
             this.DataGridParams = new Guna.UI.WinForms.GunaDataGridView();
@@ -47,12 +49,56 @@ namespace DeMan
             // plbtn
             // 
             this.plbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.plbtn.Controls.Add(this.btnSave);
+            this.plbtn.Controls.Add(this.btnWriteRAM);
             this.plbtn.Controls.Add(this.brnRead);
             this.plbtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.plbtn.Location = new System.Drawing.Point(0, 0);
             this.plbtn.Name = "plbtn";
             this.plbtn.Size = new System.Drawing.Size(800, 30);
             this.plbtn.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSave.IconColor = System.Drawing.Color.White;
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.IconSize = 40;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(402, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(201, 30);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Tag = "Считать";
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnWriteRAM
+            // 
+            this.btnWriteRAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
+            this.btnWriteRAM.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnWriteRAM.FlatAppearance.BorderSize = 0;
+            this.btnWriteRAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWriteRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnWriteRAM.ForeColor = System.Drawing.Color.White;
+            this.btnWriteRAM.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnWriteRAM.IconColor = System.Drawing.Color.White;
+            this.btnWriteRAM.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWriteRAM.IconSize = 40;
+            this.btnWriteRAM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWriteRAM.Location = new System.Drawing.Point(201, 0);
+            this.btnWriteRAM.Name = "btnWriteRAM";
+            this.btnWriteRAM.Size = new System.Drawing.Size(201, 30);
+            this.btnWriteRAM.TabIndex = 1;
+            this.btnWriteRAM.Tag = "Записать в ОЗУ";
+            this.btnWriteRAM.Text = "Записать в ОЗУ";
+            this.btnWriteRAM.UseVisualStyleBackColor = false;
             // 
             // brnRead
             // 
@@ -86,65 +132,65 @@ namespace DeMan
             // 
             // DataGridParams
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridParams.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.DataGridParams.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridParams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridParams.BackgroundColor = System.Drawing.Color.White;
             this.DataGridParams.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridParams.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridParams.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridParams.ColumnHeadersHeight = 21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DataGridParams.ColumnHeadersHeight = 25;
             this.DataGridParams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.Параметр,
             this.Value});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridParams.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridParams.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridParams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGridParams.EnableHeadersVisualStyles = false;
-            this.DataGridParams.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DataGridParams.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.DataGridParams.Location = new System.Drawing.Point(0, 0);
             this.DataGridParams.Name = "DataGridParams";
             this.DataGridParams.RowHeadersVisible = false;
             this.DataGridParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridParams.Size = new System.Drawing.Size(800, 398);
             this.DataGridParams.TabIndex = 0;
-            this.DataGridParams.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridParams.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Light;
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.DataGridParams.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridParams.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DataGridParams.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DataGridParams.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.DataGridParams.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridParams.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridParams.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DataGridParams.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.DataGridParams.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             this.DataGridParams.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridParams.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DataGridParams.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridParams.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.DataGridParams.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridParams.ThemeStyle.HeaderStyle.Height = 21;
+            this.DataGridParams.ThemeStyle.HeaderStyle.Height = 25;
             this.DataGridParams.ThemeStyle.ReadOnly = false;
             this.DataGridParams.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridParams.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridParams.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DataGridParams.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridParams.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.DataGridParams.ThemeStyle.RowsStyle.Height = 22;
-            this.DataGridParams.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridParams.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridParams.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.DataGridParams.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // Num
             // 
@@ -171,6 +217,7 @@ namespace DeMan
             this.Controls.Add(this.plbtn);
             this.Name = "Params";
             this.Text = "Params";
+            this.Shown += new System.EventHandler(this.Params_Shown);
             this.plbtn.ResumeLayout(false);
             this.plTable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridParams)).EndInit();
@@ -187,5 +234,7 @@ namespace DeMan
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Параметр;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnWriteRAM;
     }
 }

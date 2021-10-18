@@ -20,6 +20,9 @@ namespace DeMan
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        public static Color BTNColor;
+
+
 
         public Main()
         {
@@ -84,6 +87,7 @@ namespace DeMan
                     plLogo.BackColor = ColorChoice.ChangeColorBrightness(color, -0.3);
                     labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
+                    BTNColor = color;
                 }
 
             }
@@ -105,6 +109,7 @@ namespace DeMan
             this.plForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
             //label1.Text = childForm.Text;
         }
         public void DisableButton()
@@ -160,6 +165,7 @@ namespace DeMan
         private void btnParams_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Params(), sender);
+
         }
 
         private void btnGraph_Click(object sender, EventArgs e)
@@ -209,7 +215,6 @@ namespace DeMan
                 }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new USB(), sender);
