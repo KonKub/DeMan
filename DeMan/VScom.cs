@@ -30,7 +30,7 @@ namespace DeMan
             CanDevice.SetDebugMode(VSCAN.VSCAN_DEBUG_MODE_FILE);
 
             // open CAN channel: please specify the name of your device according to User Manual
-            CanDevice.Open(VSCAN.VSCAN_FIRST_FOUND, VSCAN.VSCAN_MODE_SELF_RECEPTION);
+            CanDevice.Open(VSCAN.VSCAN_FIRST_FOUND, VSCAN.VSCAN_MODE_NORMAL);
 
             // set some options
             CanDevice.SetSpeed(VSCAN.VSCAN_SPEED_250K);
@@ -47,7 +47,12 @@ namespace DeMan
             timerRead.Start();
         }
 
-        private void timerReadCallback(object sender, EventArgs e)
+        ~VScom()
+        {
+            CanDevice.Close();
+        }
+
+            private void timerReadCallback(object sender, EventArgs e)
         {
             read();
         }

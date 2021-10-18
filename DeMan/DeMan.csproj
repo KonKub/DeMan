@@ -57,6 +57,8 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parameters.cs" />
+    <Compile Include="ProtocolCAN.cs" />
     <Compile Include="VScom.cs" />
     <Compile Include="ColorChoice.cs" />
     <Compile Include="USB.cs">

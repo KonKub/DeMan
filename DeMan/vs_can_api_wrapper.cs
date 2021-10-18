@@ -135,7 +135,7 @@ namespace DeMan
 		/**
          * @name CAN device name
          * @{ */
-		public const string VSCAN_FIRST_FOUND = "";
+		public const string VSCAN_FIRST_FOUND = "COM4";
 		/**< use first found VSCAN device */
 		/** @} */
 
