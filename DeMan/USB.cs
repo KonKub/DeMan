@@ -15,6 +15,15 @@ namespace DeMan
         public USB()
         {
             InitializeComponent();
+
+            Parameters Par = new Parameters();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                              //   команда|-----ExtID------|------------Data[8]-----------------
+            byte[] w = new byte[] { 0, 101, 0, 100, 67, 240, 0, 18, 255, 255, 255, 255, 255, 255 };
+            //USBCAN.write(w);
         }
     }
 }
