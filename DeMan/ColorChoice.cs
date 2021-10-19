@@ -10,12 +10,10 @@ namespace DeMan
     public static class ColorChoice
     {
         public static List<string> ColorList = new List<string> {
-                                                                    "#726E6D", //гранит
+                                                                    "#726E6D" ,//гранит
                                                                     "#4863A0", //Steel Blue
                                                                     "#0041C2", //Blueberry Blue
                                                                     "#736AFF", //Light Slate Blue
-                                                                    "#82CAFF", //день Голубого
-                                                                    "#50EBEC", //Celeste
                                                                     "#48CCCD", //Medium Turquoise
                                                                     "#728C00", //Venom Green
                                                                     "#387C44", //Pine Green
@@ -24,30 +22,29 @@ namespace DeMan
                                                                     "#C58917", //Cinnamon
                                                                     "#493D26", //Mocha
                                                                     "#C47451", //Orange Salmon
-                                                                    "#8E35EF", //Purple
-                                                                    "#8467D7", //Medium Purple
-                                                                    "#4E387E" //Purple Haze
+                                                                    "#9E7BFF", //Purple
+                                                                    "#4E387E", //Purple Haze
+                                                                    "#98AFC7"
         };
 
 
         public static List<string> ColorListRow = new List<string> {
-                                                                    "#D1D0CE",
-                                                                    "#659EC7", 
-                                                                    "#659EC7",
+                                                                    "#D3D3D3",
+                                                                    "#C9DFEC",
+                                                                    "#C9DFEC",
                                                                     "#CCCCFF",
-                                                                    "#BDEDFF",
-                                                                    "#CCFFFF",
-                                                                    "#CFECEC",
-                                                                    "#9CB071",
-                                                                    "#99C68E",
-                                                                    "#F3E5AB",
-                                                                    "#AF9B60",
-                                                                    "#AF9B60",
-                                                                    "#C19A6B",
-                                                                    "#EDC9AF",
+                                                                    "#DBF9DB",
+                                                                    "#DBF9DB",
+                                                                    "#DBF9DB",
+                                                                    "#EDE6D6",
+                                                                    "#EDE6D6",
+                                                                    "#EDE6D6",
+                                                                    "#E5E4E2",
+                                                                    "#FFDDCA",
                                                                     "#DCD0FF",
                                                                     "#CCCCFF",
-                                                                    "#9E7BFF"
+                                                                    "#DCDCDC"
+
         };
 
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
