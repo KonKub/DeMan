@@ -33,9 +33,9 @@ namespace DeMan
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DataGridParams = new Guna.UI.WinForms.GunaDataGridView();
-            this.Param = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Param = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridParams = new Guna.UI.WinForms.GunaDataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridParams)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +48,16 @@ namespace DeMan
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(870, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // Value
+            // 
+            this.Value.HeaderText = "Значение";
+            this.Value.Name = "Value";
+            // 
+            // Param
+            // 
+            this.Param.HeaderText = "Параметр";
+            this.Param.Name = "Param";
             // 
             // DataGridParams
             // 
@@ -66,7 +76,7 @@ namespace DeMan
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridParams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridParams.ColumnHeadersHeight = 21;
             this.DataGridParams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Param,
             this.Value});
@@ -99,7 +109,7 @@ namespace DeMan
             this.DataGridParams.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridParams.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.DataGridParams.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridParams.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridParams.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridParams.ThemeStyle.HeaderStyle.Height = 21;
             this.DataGridParams.ThemeStyle.ReadOnly = false;
             this.DataGridParams.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(215)))));
@@ -109,16 +119,6 @@ namespace DeMan
             this.DataGridParams.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridParams.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(123)))));
             this.DataGridParams.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // Param
-            // 
-            this.Param.HeaderText = "Параметр";
-            this.Param.Name = "Param";
-            // 
-            // Value
-            // 
-            this.Value.HeaderText = "Значение";
-            this.Value.Name = "Value";
             // 
             // Params
             // 
