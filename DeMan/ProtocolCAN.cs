@@ -18,14 +18,8 @@ namespace DeMan
 
             public byte[] Data;
         }
-        private TMessage USBCANMessage = new TMessage()
-        {
-            Data = new byte[8] { 1, 2, 3, 4, 5, 6, 7, 8 }
-        };
-        private TMessage VSCANMessage = new TMessage()
-        {
-            Data = new byte[8] { 1, 2, 3, 4, 5, 6, 7, 8 }
-        };
+        private TMessage USBCANMessage = new TMessage() { Data = new byte[8] { 1, 2, 3, 4, 5, 6, 7, 8 } };
+        private TMessage VSCANMessage = new TMessage() { Data = new byte[8] { 1, 2, 3, 4, 5, 6, 7, 8 } };
 
         private USB_CAN_Adapter USBCAN;
         private VScom VSCCAN;
@@ -47,8 +41,7 @@ namespace DeMan
         private void USBCANReadData(byte[] AData)                              //обработчик для события USB-CAN ReadNotification
         {
             //string s = "";
-            //for (int i = 0; i < AData.Length; i++)
-            //    s = s + String.Format("{0,4}", AData[i]);
+            //for (int i = 0; i < AData.Length; i++) s = s + String.Format("{0,4}", AData[i]);
             //label1.Text = s;
             //LogBox.Text += s + Environment.NewLine;
         }
@@ -66,13 +59,8 @@ namespace DeMan
                 USBCANMessage.TransmitterAddr = (byte)(ID & 0b0000_0111);
             }
             for (int i = 4; i < AData.Length; i++)
-            {
                 USBCANMessage.Data[i - 4] = AData[i];
-                //s = s + String.Format("{0,4}", AData[i]);
-            }
-            //LogBox.Text += s + Environment.NewLine;
 
-            ProcessMessage(USBCANMessage);
             ReadCAN?.Invoke(USBCANMessage);
         }
 
@@ -94,13 +82,8 @@ namespace DeMan
                 for (int j = 0; j < 7; j++)
                     VSCANMessage.Data[j] = AMsg[i].Data[j];
 
-                ProcessMessage(VSCANMessage);
                 ReadCAN?.Invoke(VSCANMessage);
             }
-        }
-
-        private void ProcessMessage(TMessage AMessage)                                          //обработка полученного сообщения
-        { 
         }
     }
 }
