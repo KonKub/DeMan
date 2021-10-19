@@ -16,12 +16,15 @@ namespace DeMan
         //Координаты мышки
         private int borderSize = 2;
         private Size formSize;
-
         //Fields
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        public static Color BTNColor;
+        public static Color TableRowColor;
+
+
 
         public Main()
         {
@@ -61,7 +64,7 @@ namespace DeMan
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //Method
-        private Color SelectThemeColor()
+        private int SelectThemeColor()
         {
             int index = random.Next(ColorChoice.ColorList.Count);
             while (tempIndex == index)
@@ -69,23 +72,26 @@ namespace DeMan
                 index = random.Next(ColorChoice.ColorList.Count);
             }
             tempIndex = index;
-            return ColorTranslator.FromHtml(ColorChoice.ColorList[index]);
+            return index;
         }
-        private void ActivateButton(object btnSender)
+        public void ActivateButton(object btnSender)
         {
             if (btnSender != null)
             {
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-                    Color color = SelectThemeColor();
+                    int i = SelectThemeColor();
+                    Color color = ColorTranslator.FromHtml(ColorChoice.ColorList[i]);
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     plBtn.BackColor = color;
                     plLogo.BackColor = ColorChoice.ChangeColorBrightness(color, -0.3);
-                   //Uncomment labelTitle.Text = (btnSender as Button).Tag.ToString();
+                    labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
+                    BTNColor = color;
+                    TableRowColor = ColorTranslator.FromHtml(ColorChoice.ColorListRow[i]);
                 }
 
             }
@@ -107,9 +113,10 @@ namespace DeMan
             this.plForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
             //label1.Text = childForm.Text;
         }
-        private void DisableButton()
+        public void DisableButton()
         {
             foreach (Control previousBtn in plMenu.Controls)
             {
@@ -162,6 +169,7 @@ namespace DeMan
         private void btnParams_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Params(), sender);
+
         }
 
         private void btnGraph_Click(object sender, EventArgs e)
@@ -211,10 +219,14 @@ namespace DeMan
                 }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new USB(), sender);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Settings(), sender);
         }
     }
 }

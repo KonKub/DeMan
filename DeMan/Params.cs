@@ -17,9 +17,10 @@ namespace DeMan
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Params_Shown(object sender, EventArgs e)
         {
-
+            DataGridParams.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(48, 48, 54);
+            DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = Main.TableRowColor;
         }
     }
 }

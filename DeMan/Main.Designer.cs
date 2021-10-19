@@ -30,6 +30,7 @@ namespace DeMan
         private void InitializeComponent()
         {
             this.plMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnList = new FontAwesome.Sharp.IconButton();
             this.btnBoot = new FontAwesome.Sharp.IconButton();
             this.btnGraph = new FontAwesome.Sharp.IconButton();
@@ -44,7 +45,7 @@ namespace DeMan
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.plForm = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.plMenu.SuspendLayout();
             this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +57,7 @@ namespace DeMan
             // 
             this.plMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.plMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.plMenu.Controls.Add(this.iconButton1);
             this.plMenu.Controls.Add(this.button1);
             this.plMenu.Controls.Add(this.btnList);
             this.plMenu.Controls.Add(this.btnBoot);
@@ -67,6 +69,18 @@ namespace DeMan
             this.plMenu.Name = "plMenu";
             this.plMenu.Size = new System.Drawing.Size(214, 679);
             this.plMenu.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 438);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 57);
+            this.button1.TabIndex = 10;
+            this.button1.Tag = "Кнопка";
+            this.button1.Text = "Кнопка";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnList
             // 
@@ -307,16 +321,28 @@ namespace DeMan
             this.plForm.Size = new System.Drawing.Size(1142, 623);
             this.plForm.TabIndex = 5;
             // 
-            // button1
+            // iconButton1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 57);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 495);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(214, 85);
+            this.iconButton1.TabIndex = 11;
+            this.iconButton1.Tag = "Настройки";
+            this.iconButton1.Text = "Настройки";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Main
             // 
@@ -360,6 +386,7 @@ namespace DeMan
         private FontAwesome.Sharp.IconButton btnSizeMin;
         private FontAwesome.Sharp.IconButton btnFold;
         private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
 

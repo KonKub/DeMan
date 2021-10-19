@@ -10,34 +10,46 @@ namespace DeMan
     public static class ColorChoice
     {
         public static List<string> ColorList = new List<string> {
-                                                                    "#837E7C", //гранит
-                                                                    "#4863A0", //cтальной синий
-                                                                    "#0041C2", //голубика голубая
-                                                                    "#736AFF", //световой шифер синий
+                                                                    "#726E6D", //гранит
+                                                                    "#4863A0", //Steel Blue
+                                                                    "#0041C2", //Blueberry Blue
+                                                                    "#736AFF", //Light Slate Blue
                                                                     "#82CAFF", //день Голубого
-                                                                    "#7FFFD4", //аквамарин
-                                                                    "#48CCCD", //средняя бирюза
-                                                                    "#728C00", //зеленый яд
-                                                                    "#387C44", //сосновый зеленый
-                                                                    "#B2C248", //авокадо-зеленый
-                                                                    "#FFE87C", //солнце
-                                                                    "#F7E7CE", //шампанское
-                                                                    "#FFDB58", //горчичный
-                                                                    "#E9AB17", //пчела Желтая
+                                                                    "#50EBEC", //Celeste
+                                                                    "#48CCCD", //Medium Turquoise
+                                                                    "#728C00", //Venom Green
+                                                                    "#387C44", //Pine Green
                                                                     "#C9BE62", //имбирь Браун
-                                                                    "#C68E17", //карамель
-                                                                    "#C58917", //корица
-                                                                    "#493D26", //кофе мокко
-                                                                    "#C47451", //оранжевый лосось
-                                                                    "#FF7F50", //коралловый
-                                                                    "#C5908E", //хаки Роуз
-                                                                    "#8E35EF", //пурпурный
-                                                                    "#E3E4FA", //лаванда синяя
-                                                                    "#8467D7", //средний фиолетовый
-                                                                    "#4E387E", //фиолетовый туман
-                                                                    "#F778A1", //гвоздика розовая
-                                                                    "#EDC9AF" //песок пустыни
+                                                                    "#C68E17", //Caramel
+                                                                    "#C58917", //Cinnamon
+                                                                    "#493D26", //Mocha
+                                                                    "#C47451", //Orange Salmon
+                                                                    "#8E35EF", //Purple
+                                                                    "#8467D7", //Medium Purple
+                                                                    "#4E387E" //Purple Haze
         };
+
+
+        public static List<string> ColorListRow = new List<string> {
+                                                                    "#D1D0CE",
+                                                                    "#659EC7", 
+                                                                    "#659EC7",
+                                                                    "#CCCCFF",
+                                                                    "#BDEDFF",
+                                                                    "#CCFFFF",
+                                                                    "#CFECEC",
+                                                                    "#9CB071",
+                                                                    "#99C68E",
+                                                                    "#F3E5AB",
+                                                                    "#AF9B60",
+                                                                    "#AF9B60",
+                                                                    "#C19A6B",
+                                                                    "#EDC9AF",
+                                                                    "#DCD0FF",
+                                                                    "#CCCCFF",
+                                                                    "#9E7BFF"
+        };
+
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             double red = color.R;

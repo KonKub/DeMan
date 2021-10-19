@@ -29,134 +29,117 @@ namespace DeMan
         /// </summary>
         private void InitializeComponent()
         {
-            this.plbtn = new System.Windows.Forms.Panel();
-            this.brnRead = new FontAwesome.Sharp.IconButton();
-            this.plTable = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.DataGridParams = new Guna.UI.WinForms.GunaDataGridView();
             this.Param = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vallue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.plbtn.SuspendLayout();
-            this.plTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridParams)).BeginInit();
             this.SuspendLayout();
             // 
-            // plbtn
+            // panel1
             // 
-            this.plbtn.BackColor = System.Drawing.Color.White;
-            this.plbtn.Controls.Add(this.iconButton1);
-            this.plbtn.Controls.Add(this.brnRead);
-            this.plbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.plbtn.Location = new System.Drawing.Point(0, 0);
-            this.plbtn.Name = "plbtn";
-            this.plbtn.Size = new System.Drawing.Size(800, 53);
-            this.plbtn.TabIndex = 0;
+            this.panel1.Controls.Add(this.DataGridParams);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(870, 681);
+            this.panel1.TabIndex = 0;
             // 
-            // brnRead
+            // DataGridParams
             // 
-            this.brnRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.brnRead.FlatAppearance.BorderSize = 0;
-            this.brnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.brnRead.ForeColor = System.Drawing.Color.White;
-            this.brnRead.IconChar = FontAwesome.Sharp.IconChar.Readme;
-            this.brnRead.IconColor = System.Drawing.Color.White;
-            this.brnRead.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.brnRead.IconSize = 40;
-            this.brnRead.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.brnRead.Location = new System.Drawing.Point(0, 0);
-            this.brnRead.Name = "brnRead";
-            this.brnRead.Size = new System.Drawing.Size(201, 53);
-            this.brnRead.TabIndex = 0;
-            this.brnRead.Text = "Считать";
-            this.brnRead.UseVisualStyleBackColor = false;
-            // 
-            // plTable
-            // 
-            this.plTable.Controls.Add(this.dataGridView1);
-            this.plTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.plTable.Location = new System.Drawing.Point(0, 53);
-            this.plTable.Name = "plTable";
-            this.plTable.Size = new System.Drawing.Size(800, 398);
-            this.plTable.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(196)))));
+            this.DataGridParams.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridParams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridParams.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridParams.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DataGridParams.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridParams.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(219)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridParams.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGridParams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridParams.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Param,
-            this.Vallue});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 398);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Num
-            // 
-            this.Num.HeaderText = "№";
-            this.Num.Name = "Num";
+            this.Value});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(123)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridParams.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGridParams.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DataGridParams.EnableHeadersVisualStyles = false;
+            this.DataGridParams.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(194)))));
+            this.DataGridParams.Location = new System.Drawing.Point(0, 0);
+            this.DataGridParams.Name = "DataGridParams";
+            this.DataGridParams.RowHeadersVisible = false;
+            this.DataGridParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridParams.Size = new System.Drawing.Size(450, 681);
+            this.DataGridParams.TabIndex = 0;
+            this.DataGridParams.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Lime;
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(196)))));
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DataGridParams.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DataGridParams.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridParams.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(194)))));
+            this.DataGridParams.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(219)))), ((int)(((byte)(57)))));
+            this.DataGridParams.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataGridParams.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DataGridParams.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridParams.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridParams.ThemeStyle.HeaderStyle.Height = 21;
+            this.DataGridParams.ThemeStyle.ReadOnly = false;
+            this.DataGridParams.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(215)))));
+            this.DataGridParams.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridParams.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DataGridParams.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridParams.ThemeStyle.RowsStyle.Height = 22;
+            this.DataGridParams.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(123)))));
+            this.DataGridParams.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // Param
             // 
             this.Param.HeaderText = "Параметр";
             this.Param.Name = "Param";
             // 
-            // Vallue
+            // Value
             // 
-            this.Vallue.HeaderText = "Значение";
-            this.Vallue.Name = "Vallue";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Walking;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(198, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(201, 53);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Считать";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.Value.HeaderText = "Значение";
+            this.Value.Name = "Value";
             // 
             // Params
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.plTable);
-            this.Controls.Add(this.plbtn);
+            this.ClientSize = new System.Drawing.Size(870, 681);
+            this.Controls.Add(this.panel1);
             this.Name = "Params";
             this.Text = "Params";
-            this.plbtn.ResumeLayout(false);
-            this.plTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Shown += new System.EventHandler(this.Params_Shown);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridParams)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel plbtn;
-        private FontAwesome.Sharp.IconButton brnRead;
-        private System.Windows.Forms.Panel plTable;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaDataGridView DataGridParams;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vallue;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
     }
 }
