@@ -12,22 +12,15 @@ namespace DeMan
 {
     public partial class Params : Form
     {
-        public delegate string ChangeColorButton();
-
         public Params()
         {
             InitializeComponent();
-
         }
 
-        public void Params_Shown(object sender, EventArgs e)
+        private void Params_Shown(object sender, EventArgs e)
         {
-            DataGridParams.ThemeStyle.HeaderStyle.BackColor = Main.BTNColor;
-            for (int i = 0; i < 10; i++)
-            {
-                DataGridParams.Rows.Add(i,"dgd","dgfes");
-            }
+            DataGridParams.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(48, 48, 54);
+            DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = Main.TableRowColor;
         }
-
     }
 }

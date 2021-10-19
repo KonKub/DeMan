@@ -28,6 +28,28 @@ namespace DeMan
                                                                     "#8467D7", //Medium Purple
                                                                     "#4E387E" //Purple Haze
         };
+
+
+        public static List<string> ColorListRow = new List<string> {
+                                                                    "#D1D0CE",
+                                                                    "#659EC7", 
+                                                                    "#659EC7",
+                                                                    "#CCCCFF",
+                                                                    "#BDEDFF",
+                                                                    "#CCFFFF",
+                                                                    "#CFECEC",
+                                                                    "#9CB071",
+                                                                    "#99C68E",
+                                                                    "#F3E5AB",
+                                                                    "#AF9B60",
+                                                                    "#AF9B60",
+                                                                    "#C19A6B",
+                                                                    "#EDC9AF",
+                                                                    "#DCD0FF",
+                                                                    "#CCCCFF",
+                                                                    "#9E7BFF"
+        };
+
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             double red = color.R;

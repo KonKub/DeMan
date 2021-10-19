@@ -22,6 +22,7 @@ namespace DeMan
         private int tempIndex;
         private Form activeForm;
         public static Color BTNColor;
+        public static Color TableRowColor;
 
 
 
@@ -63,7 +64,7 @@ namespace DeMan
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //Method
-        private Color SelectThemeColor()
+        private int SelectThemeColor()
         {
             int index = random.Next(ColorChoice.ColorList.Count);
             while (tempIndex == index)
@@ -71,7 +72,7 @@ namespace DeMan
                 index = random.Next(ColorChoice.ColorList.Count);
             }
             tempIndex = index;
-            return ColorTranslator.FromHtml(ColorChoice.ColorList[index]);
+            return index;
         }
         public void ActivateButton(object btnSender)
         {
@@ -80,7 +81,8 @@ namespace DeMan
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-                    Color color = SelectThemeColor();
+                    int i = SelectThemeColor();
+                    Color color = ColorTranslator.FromHtml(ColorChoice.ColorList[i]);
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
@@ -89,6 +91,7 @@ namespace DeMan
                     labelTitle.Text = (btnSender as Button).Tag.ToString();
                     btnMain.ForeColor = color;
                     BTNColor = color;
+                    TableRowColor = ColorTranslator.FromHtml(ColorChoice.ColorListRow[i]);
                 }
 
             }
@@ -220,8 +223,10 @@ namespace DeMan
         {
             OpenChildForm(new USB(), sender);
         }
-        
-       
-     
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Settings(), sender);
+        }
     }
 }
