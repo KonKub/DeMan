@@ -157,7 +157,7 @@ namespace DeMan
 
         private void btnBoot_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Bootloader(), sender);
         }
 
         private void btnList_Click(object sender, EventArgs e)
@@ -205,6 +205,16 @@ namespace DeMan
         private void iconButton1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Settings(), sender);
+        }
+
+        private void plForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

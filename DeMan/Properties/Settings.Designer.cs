@@ -22,5 +22,17 @@ namespace DeMan.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ProcessText {
+            get {
+                return ((string)(this["ProcessText"]));
+            }
+            set {
+                this["ProcessText"] = value;
+            }
+        }
     }
 }

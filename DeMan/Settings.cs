@@ -35,9 +35,5 @@ namespace DeMan
             if (DataGridSetting.Height < this.Height - 10) DataGridSetting.Height = DataGridSetting.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DataGridSetting.ColumnHeadersHeight+5;
         }
 
-        private void Settings_Resize(object sender, EventArgs e)
-        {
-            if (DataGridSetting.Height < this.Height - 10) DataGridSetting.Height = DataGridSetting.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DataGridSetting.ColumnHeadersHeight + 5;
-        }
     }
 }

@@ -19,8 +19,12 @@ namespace DeMan
 
         private void Params_Shown(object sender, EventArgs e)
         {
-            DataGridParams.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(48, 48, 54);
+            DataGridParams.ThemeStyle.HeaderStyle.BackColor = Main.BTNColor;//Color.FromArgb(48, 48, 54);
             DataGridParams.ThemeStyle.AlternatingRowsStyle.BackColor = Main.TableRowColor;
+            for (int i = 0; i < 50; i++)
+            {
+                DataGridParams.Rows.Add(i, "dgd", "dgfes");
+            }
         }
     }
 }

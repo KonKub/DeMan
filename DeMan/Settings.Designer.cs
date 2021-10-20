@@ -149,7 +149,7 @@ namespace DeMan
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridSetting.ColumnHeadersHeight = 27;
+            this.DataGridSetting.ColumnHeadersHeight = 40;
             this.DataGridSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.Параметр,
@@ -184,7 +184,7 @@ namespace DeMan
             this.DataGridSetting.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.DataGridSetting.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.DataGridSetting.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridSetting.ThemeStyle.HeaderStyle.Height = 27;
+            this.DataGridSetting.ThemeStyle.HeaderStyle.Height = 40;
             this.DataGridSetting.ThemeStyle.ReadOnly = false;
             this.DataGridSetting.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.DataGridSetting.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -223,7 +223,6 @@ namespace DeMan
             this.Name = "Settings";
             this.Text = "Settings";
             this.Shown += new System.EventHandler(this.Settings_Shown);
-            this.Resize += new System.EventHandler(this.Settings_Resize);
             this.plbtn.ResumeLayout(false);
             this.plTable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSetting)).EndInit();
