@@ -1,0 +1,4 @@
+#ifdef rus
+name1=Гловная
+name2=value2
+#endif

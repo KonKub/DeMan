@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 namespace DeMan
 {
@@ -23,8 +24,8 @@ namespace DeMan
         private Form activeForm;
         public static Color BTNColor;
         public static Color TableRowColor;
-
-
+        ResourceManager rm = new ResourceManager("rmc",
+                   typeof(Main).Assembly);
 
         public Main()
         {
@@ -32,7 +33,7 @@ namespace DeMan
             CollapsMenu();
             random = new Random();
             this.Padding = new Padding(borderSize);
-
+            //labelTitle.Text = rm.GetString("name1");
         }
 
         //Drag Form
