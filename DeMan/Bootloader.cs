@@ -51,6 +51,7 @@ namespace DeMan
                 lbProcess.Text = string.Format("{0}%", report.PercentComplete);
                 ProgressBar.Value = report.PercentComplete;
                 ProgressBar.Update();
+                //lbProcess.BackColor = System.Drawing.Color.Transparent;
             };
             //Process import data
             ProcessImport(list, progressReport);

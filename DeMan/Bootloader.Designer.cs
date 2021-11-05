@@ -153,7 +153,6 @@ namespace DeMan
             // 
             this.lbProcess.AutoSize = true;
             this.lbProcess.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbProcess.Location = new System.Drawing.Point(314, 483);
             this.lbProcess.Name = "lbProcess";
             this.lbProcess.Size = new System.Drawing.Size(21, 13);
@@ -162,7 +161,6 @@ namespace DeMan
             // 
             // ProgressBar
             // 
-            this.ProgressBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ProgressBar.BorderColor = System.Drawing.Color.Black;
             this.ProgressBar.ColorStyle = Guna.UI.WinForms.ColorStyle.Default;
             this.ProgressBar.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::DeMan.Properties.Settings.Default, "ProcessText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
