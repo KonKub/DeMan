@@ -111,17 +111,6 @@ namespace DeMan.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to name1=Гловная
-        ///name2=value2
-        ///.
-        /// </summary>
-        internal static string rmc {
-            get {
-                return ResourceManager.GetString("rmc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string String {
