@@ -30,7 +30,6 @@ namespace DeMan
             CollapsMenu();
             random = new Random();
             this.Padding = new Padding(borderSize);
-            //labelTitle.Text = rm.GetString("name1");
         }
 
         //Drag Form
