@@ -6,10 +6,10 @@ namespace DeMan
 {
     class CHomeController
     {
-        public IActionResult Index()
-        {
+        //public IActionResult Index()
+        //{
            // return 0;//View();
-        }
+       // }
         public static string GetCulture(string code = "")
         {
             if (!String.IsNullOrEmpty(code))
